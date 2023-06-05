@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
-    background-color: #f7f7f7;
+    background: linear-gradient(to right, #9e9bb1 0%, #8e8181 100% );
   }
   
   .container {
@@ -24,7 +24,7 @@ body {
   
   form input[type="text"] {
     padding: 10px;
-    border: none;
+    border: 1px solid ;
     outline: none;
     font-size: 18px;
     width: 60%;

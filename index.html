@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple weather app that fetches and displays weather data for any city."
+    />
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -11,25 +15,23 @@
     <div class="container">
       <h1>Weather App</h1>
       <form>
+        <label for="city-input">City:</label>
         <input type="text" id="city-input" placeholder="Enter City" />
         <input type="submit" value="Get Weather" />
       </form>
+      <div id="error-message" class="error-message"></div>
       <div id="weather-data">
-        <div class="icon">
-          <!-- <img src="http://openweathermap.org/img/wn/01d.png" alt="Weather Icon"> -->
-        </div>
+        <div class="icon"></div>
         <div class="temperature"></div>
         <div class="description"></div>
-        <div class="details">
-          <!-- <div>Feels like: 23°C</div>
-                <div>Humidity: 40%</div>
-                <div>Wind speed: 5 m/s</div> -->
-        </div>
+        <div class="city-name"></div>
+        <!-- To show city and region -->
+        <div class="details"></div>
       </div>
     </div>
+    <footer class="footer">
+      <span><b>Copyright &copy; Designed by Pratik Pal</b></span>
+    </footer>
     <script src="index.js"></script>
-    <div class="footer">
-        <span><b>Copyright &copy; Designed by Pratik Pal</b></span>
-    </div>
   </body>
 </html>

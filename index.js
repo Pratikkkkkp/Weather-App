@@ -1,5 +1,4 @@
-const apikey = "26f1e0fd7895472bac170935243112"; // Your API key
-
+const apikey = "26f1e0fd7895472bac170935243112";
 const weatherDataEl = document.getElementById("weather-data");
 const cityInputEl = document.getElementById("city-input");
 const formEl = document.querySelector("form");
@@ -9,21 +8,20 @@ formEl.addEventListener("submit", (event) => {
   const cityValue = cityInputEl.value;
   getWeatherData(cityValue);
 });
-
 async function getWeatherData(cityValue) {
   try {
     const response = await fetch(
       `https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${cityValue}`
     );
-
-    if (!response.ok) {
+    
+  if (!response.ok) {
       throw new Error("Network response was not ok");
     }
 
     const data = await response.json();
 
     const city = data.location.name;
-    const region = data.location.region; // Get the region/state
+    const region = data.location.region;
     const temperature = Math.round(data.current.temp_c);
     const description = data.current.condition.text;
     const icon = data.current.condition.icon;
@@ -49,7 +47,7 @@ async function getWeatherData(cityValue) {
 
     weatherDataEl.querySelector(
       ".city-name"
-    ).textContent = `${city}, ${region}`; // Show city and region
+    ).textContent = `${city}, ${region}`; 
   } catch (error) {
     weatherDataEl.querySelector(".icon").innerHTML = "";
     weatherDataEl.querySelector(".temperature").textContent = "";
